@@ -182,3 +182,67 @@ const EditableContent = styled.div`
   color: #333;
   line-height: 1.5;
 `;
+
+// Código carrocel de imagens
+
+1° React-Slick
+npm install react-slick slick-carousel
+
+* Estilos do slick:
+// no seu index.tsx ou App.tsx
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
+import React from "react";
+import Slider from "react-slick";
+
+const images = [
+  "https://picsum.photos/id/1011/800/400",
+  "https://picsum.photos/id/1012/800/400",
+  "https://picsum.photos/id/1013/800/400"
+];
+
+const ImageCarousel: React.FC = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true
+  };
+
+  return (
+    <Slider {...settings}>
+      {images.map((url, index) => (
+        <div key={index}>
+          <img src={url} alt={`Imagem ${index + 1}`} style={{ width: "100%", height: "auto" }} />
+        </div>
+      ))}
+    </Slider>
+  );
+};
+
+export default ImageCarousel;
+
+2°Swipers.js
+npm install swiper
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+
+const images = [
+  "https://picsum.photos/id/1005/800/400",
+  "https://picsum.photos/id/1006/800/400",
+  "https://picsum.photos/id/1008/800/400"
+];
+
+const SwiperCarousel = () => (
+  <Swiper spaceBetween={50} slidesPerView={1} autoplay>
+    {images.map((img, idx) => (
+      <SwiperSlide key={idx}>
+        <img src={img} alt={`slide-${idx}`} style={{ width: "100%" }} />
+      </SwiperSlide>
+    ))}
+  </Swiper>
+);
