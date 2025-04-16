@@ -246,3 +246,21 @@ const SwiperCarousel = () => (
     ))}
   </Swiper>
 );
+
+// tsconfig.json
+
+"compilerOptions": {
+    "jsx": "react-jsx",
+    "target": "ESNext",
+    "module": "NodeNext",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "strict": true,
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  },
