@@ -1,3 +1,7 @@
+// código de desativação do powershell
+Set-ExecutionPolicy RemoteSigned
+
+
 // Página de login - divisão da tela
 
 import React, { useState } from "react";
