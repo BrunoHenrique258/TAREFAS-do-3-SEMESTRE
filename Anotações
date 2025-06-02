@@ -2,6 +2,10 @@
 Set-ExecutionPolicy RemoteSigned
 
 
+margin-left: 40px;
+  width: 80%;
+
+
 // Página de login - divisão da tela
 
 import React, { useState } from "react";
