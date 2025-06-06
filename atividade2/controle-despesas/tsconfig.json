@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                    // Transpila para ECMAScript 2015
+    "module": "CommonJS",              // Usado pelo Node.js
+    "rootDir": "src",                  // Código-fonte está em src/
+    "outDir": "dist",                  // Código compilado vai para dist/
+    "esModuleInterop": true,          // Suporte para importações CommonJS (ex: import express from 'express')
+    "strict": true,                   // Ativa todas as verificações de tipo estritas
+    "forceConsistentCasingInFileNames": true, // Erros para diferença de maiúsculas/minúsculas nos imports
+    "skipLibCheck": true              // Ignora checagem de tipos em dependências
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

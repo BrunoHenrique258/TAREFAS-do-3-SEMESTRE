@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Controle de Despesas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Controle de Despesas</h1>
+  <div>
+    <input type="text" id="description" placeholder="Descrição">
+    <input type="number" id="amount" placeholder="Valor">
+    <input type="date" id="date">
+    <button onclick="addExpense()">Cadastrar Despesa</button>
+  </div>
+  <h2>Total das Despesas: R$<span id="total">0.00</span></h2>
+  <div id="expenses-list"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
