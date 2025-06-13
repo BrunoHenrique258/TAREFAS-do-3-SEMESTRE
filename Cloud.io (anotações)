@@ -1,3 +1,18 @@
+// Weather Info página de clima:
+{weatherData && (
+        <WeatherInfo>
+          <h3>Clima Atual em Capitólio, Minas Gerais</h3>
+          <p>Temperatura: {weatherData.temperature}°C</p>
+          <p>Vento: {weatherData.windspeed} km/h</p>
+          <p>Direção do Vento: {weatherData.winddirection}°</p>
+          <p>Máxima de Temperatura: {weatherData.temperature_2m_max}°C</p>
+          <p>Umidade Relativa: {weatherData.humidity}%</p>
+          <p>Pressão Atmosférica: {weatherData.pressure} hPa</p>
+          <p>Radiação Solar: {weatherData.solarRadiation} W/m²</p>
+        </WeatherInfo>
+
+
+
 // Tela de login padrão
 
 import React, { useState } from "react";
