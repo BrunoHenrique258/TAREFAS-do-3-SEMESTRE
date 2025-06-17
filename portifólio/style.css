@@ -1,0 +1,70 @@
+/* Estilo Global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Principal */
+.container {
+    width: 80%;
+    max-width: 1000px;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para a Imagem de Perfil */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Títulos */
+h1 {
+    color: #333;
+}
+
+/* Texto Principal */
+p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Lista de Projetos */
+.projects {
+    list-style-type: none;
+    padding: 0;
+}
+
+.projects li {
+    margin: 10px 0;
+}
+
+.projects a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.projects a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+.footer {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #888;
+}
