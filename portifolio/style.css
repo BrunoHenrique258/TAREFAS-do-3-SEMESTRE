@@ -1,0 +1,80 @@
+/* Fonte moderna */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f8f9fc, #e9eff6);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container central com sombra suave */
+.container {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 800px;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* Imagem de perfil */
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #007bff33;
+}
+
+/* Cabeçalho */
+h1 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.intro {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+/* Título da seção */
+.projects-section h2 {
+  color: #007bff;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+/* Projetos */
+.projects {
+  list-style: none;
+  padding: 0;
+}
+
+.projects li {
+  margin: 12px 0;
+}
+
+.projects a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.projects a:hover {
+  color: #0056b3;
+}
+
+/* Rodapé */
+.footer {
+  margin-top: 40px;
+  font-size: 0.85rem;
+  color: #666;
+}
