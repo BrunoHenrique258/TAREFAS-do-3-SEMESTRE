@@ -1,7 +1,8 @@
-/* Fonte moderna */
+/* =================== GLOBAL =================== */
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #f8f9fc, #e9eff6);
+  background-color: #121212;
+  color: #EAEAEA;
   margin: 0;
   padding: 0;
   display: flex;
@@ -10,71 +11,247 @@ body {
   min-height: 100vh;
 }
 
-/* Container central com sombra suave */
+/* =================== CONTAINER =================== */
 .container {
-  background-color: #ffffff;
+  background-color: #1e1e1e;
   width: 90%;
   max-width: 800px;
   padding: 40px;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
   text-align: center;
+  animation: fadeInUp 0.7s ease forwards;
+  opacity: 0;
 }
 
-/* Imagem de perfil */
+/* =================== IMAGEM DE PERFIL =================== */
 .profile-img {
   width: 140px;
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
+  
   margin-bottom: 20px;
-  border: 4px solid #007bff33;
+  border: 3px solid #1F6FEB;
 }
 
-/* Cabeçalho */
+/* =================== TÍTULOS E TEXTOS =================== */
 h1 {
-  font-size: 2rem;
-  color: #222;
-  margin-bottom: 10px;
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  margin-bottom: 8px;
 }
 
 .intro {
-  color: #555;
-  font-size: 1rem;
+  color: #CCCCCC;
+  font-size: 0.95rem;
   margin-bottom: 30px;
 }
 
-/* Título da seção */
-.projects-section h2 {
-  color: #007bff;
-  font-size: 1.4rem;
+h2 {
+  color: #1F6FEB;
+  font-size: 1.2rem;
+  margin-top: 40px;
   margin-bottom: 20px;
 }
 
-/* Projetos */
+/* =================== PROJETOS =================== */
 .projects {
   list-style: none;
   padding: 0;
 }
 
 .projects li {
-  margin: 12px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 16px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.projects li:hover {
+  background-color: #1a1a1a;
 }
 
 .projects a {
-  color: #007bff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 4px;
+}
+
+.project-text {
+  color: #00C9A7;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.projects a:hover .project-text {
+  color: #FFD166;
+}
+
+/* =================== OUTRAS ATIVIDADES =================== */
+.other-works-section h2 {
+  color: #1F6FEB;
+  font-size: 1.2rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.other-links {
+  list-style: none;
+  padding: 0;
+}
+
+.other-links li {
+  margin: 10px 0;
+}
+
+.other-links a {
+  color: #00C9A7;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
-.projects a:hover {
-  color: #0056b3;
+.other-links a:hover {
+  color: #FFD166;
 }
 
-/* Rodapé */
+/* =================== HABILIDADES =================== */
+.skills-section h2 {
+  color: #1F6FEB;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  background-color: #2a2a2a;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: #EAEAEA;
+  font-weight: 500;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.skills li:hover {
+  transform: scale(1.05);
+  background-color: #1F6FEB;
+}
+
+/* =================== CONTATO =================== */
+.contact-section {
+  margin-top: 50px;
+}
+
+.contact-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  color: #00C9A7;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: #FFD166;
+}
+
+/* =================== RODAPÉ =================== */
 .footer {
   margin-top: 40px;
-  font-size: 0.85rem;
-  color: #666;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* =================== RESPONSIVIDADE =================== */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.05rem;
+  }
+
+  .intro,
+  .footer {
+    font-size: 0.85rem;
+  }
+
+  .skills {
+    gap: 8px;
+  }
+
+  .skills li {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .project-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .project-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* =================== ANIMAÇÕES =================== */
+.container,
+.profile-img,
+.projects a,
+.skills li {
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
