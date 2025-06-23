@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Eventos</title>
+</head>
+<body>
+  <h1>Gerenciador de Eventos</h1>
+  
+  
+  <form id="eventoForm">
+    <input type="text" id="titulo" placeholder="Título" required>
+    <textarea id="descricao" placeholder="Descrição"></textarea>
+    <input type="datetime-local" id="data" required>
+    <input type="text" id="local" placeholder="Local" required>
+    <input type="number" id="valor" placeholder="Valor" required>
+    <button type="submit">Criar Evento</button>
+  </form>
+
+  <!-- Lista de Eventos -->
+  <div id="eventosList">
+    <h2>Eventos:</h2>
+    <ul id="eventos"></ul>
+  </div>
+
+  <script>
+    // Função para criar um evento
+    document.getElementById('eventoForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const eventoData = {
+        titulo: document.getElementById('titulo').value,
+        descricao: document.getElementById('descricao').value,
+        data: new Date(document.getElementById('data').value),
+        local: document.getElementById('local').value,
+        valor: parseFloat(document.getElementById('valor').value),
+      };
+
+      try {
+        const response = await fetch('http://localhost:3000/api/eventos', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(eventoData),
+        });
+        const data = await response.json();
+        alert(data.message);
+        listarEventos();
+      } catch (error) {
+        console.error('Erro ao criar evento:', error);
+      }
+    });
+
+    
+    async function listarEventos() {
+      const response = await fetch('http://localhost:3000/api/eventos');
+      const eventos = await response.json();
+      const eventosList = document.getElementById('eventos');
+      eventosList.innerHTML = '';
+     
+    }
